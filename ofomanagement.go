@@ -82,7 +82,7 @@ func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string)
 		return nil, errors.New("Incorrect number of arguments. Expecting 4")
 	}
 	var err error
-	location := Location {Id:args[0],Status:args[1]+","args[2]+","+args[3],locx:args[2],locy:args[3]}
+	location := Location {Id:args[0],Status:args[1]+","+args[2]+","+args[3],locx:args[2],locy:args[3]}
 	
 	locationlBytes,err:= json.Marshal(&location)
 	
